@@ -12,7 +12,7 @@ public class ConnectionGUI : MonoBehaviour
 	public string ip = "192.168.1.110";
 	public int port = 9933;
 	private string statusMessage = "";
-	private SmartFox smartFox;
+	private static SmartFox smartFox;
 
 	//----------------------------------------------------------
 	// Called when program starts
@@ -43,11 +43,14 @@ public class ConnectionGUI : MonoBehaviour
 	//----------------------------------------------------------
 	// Handle connection response from server
 	//----------------------------------------------------------
-	public void OnConnection(BaseEvent evt) {
+	public void OnConnection(BaseEvent evt)
+	{
 		bool success = (bool)evt.Params["success"];
-		if (success) {
+		if (success)
+		{
 			statusMessage = "Connection succesfull!";
-		} else {
+		} else
+		{
 			statusMessage = "Can't connect!";			
 		}
 	}
@@ -60,7 +63,11 @@ public class ConnectionGUI : MonoBehaviour
 	//----------------------------------------------------------
 	// Disconnect from the socket when shutting down the game
 	//----------------------------------------------------------
-	public void OnApplicationQuit() {
-		smartFox.Disconnect();
+	public void OnApplicationQuit()
+	{
+		if(smartFox.IsConnected)
+		{
+            smartFox.Disconnect();
+        }
 	}
 }

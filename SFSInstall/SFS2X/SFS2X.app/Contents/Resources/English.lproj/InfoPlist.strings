@@ -1,0 +1,4 @@
+CFBundleName = "SFS2X";
+CFBundleShortVersionString = "1.0";
+CFBundleGetInfoString = "SFS2X version 1.0 Copyright 2010 gotoAndPlay()";
+NSHumanReadableCopyright = "Copyright 2010 gotoAndPlay().";

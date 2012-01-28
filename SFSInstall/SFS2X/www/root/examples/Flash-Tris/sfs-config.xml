@@ -1,0 +1,36 @@
+<!-- 
+
+	:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	SFS2X Client Configuration file
+	(c) 2009 gotoAndPlay
+	:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+-->
+
+
+<SmartFoxConfig>
+	<!-- Mandatory Settings -->
+	<ip>192.168.0.16</ip>
+	<port>9933</port>
+	<zone>SimpleChat</zone>
+	<!-- End Mandatory Settings -->
+	
+	<debug>true</debug>
+	
+	<!-- For generic http port communication -->
+	<httpPort>8080</httpPort>
+	
+	<!-- 
+		BlueBox settings 
+		
+		useBlueBox: falls back to BlueBox if socket connection fails, default = true
+		blueBoxAddress: if not passed uses the same as <ip>		
+		blueBoxPort: if not passed uses the same as <httpPort>
+		blueBoxPollingRate: the polling interval between requests, default 700ms
+	-->
+	<useBlueBox>true</useBlueBox>
+	<blueBoxAddress></blueBoxAddress>
+	<blueBoxPort></blueBoxPort>
+	<blueBoxPollingRate></blueBoxPollingRate>
+	
+</SmartFoxConfig>

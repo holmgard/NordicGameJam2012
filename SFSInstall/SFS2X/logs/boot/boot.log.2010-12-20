@@ -1,0 +1,44 @@
+20 dic 2010 17:06:44,585 INFO  [main] bootLogger     - SmartFoxServer 2X
+20 dic 2010 17:06:44,589 INFO  [main] bootLogger     - BitSwarmEngine version: 3.3.1 { main }
+20 dic 2010 17:06:44,590 INFO  [main] bootLogger     - System Info:
+	Processor(s): 4
+	VM Max. memory: 129MB
+	os.name: Mac OS X
+	os.arch: x86_64
+	os.version: 10.6.5
+	java.version: 1.6.0_22
+	java.vendor: Apple Inc.
+	java.vendor.url: http://www.apple.com/
+	java.vm.specification.version: 1.0
+	java.vm.version: 17.1-b03-307
+	java.vm.vendor: Apple Inc.
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: /var/folders/Eg/EgFR68qKFh46MT9+EAsrSU+++TM/-Tmp-/
+	Default charset: UTF-8
+
+20 dic 2010 17:06:44,592 INFO  [main] bootLogger     - Network Info:
+	Card: vnic1
+		 ->10.37.129.2
+	Card: vnic0
+		 ->10.211.55.2
+	Card: en1
+		 ->192.168.0.16
+		 ->fe80:0:0:0:5ab0:35ff:fe77:4b07%5
+	Card: lo0
+		 ->127.0.0.1
+		 ->fe80:0:0:0:0:0:0:1%1
+		 ->0:0:0:0:0:0:0:1
+
+20 dic 2010 17:06:44,599 INFO  [main] bootLogger     - Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@34fc265a
+20 dic 2010 17:06:44,605 INFO  [main] bootLogger     - ReaderSelector opened
+20 dic 2010 17:06:44,616 INFO  [main] bootLogger     - AcceptSelector opened
+20 dic 2010 17:06:44,620 INFO  [main] bootLogger     - Added bound tcp socket --> 127.0.0.1:9933
+20 dic 2010 17:06:44,621 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.SystemController -- Queue: 0/20000
+20 dic 2010 17:06:44,622 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.ExtensionController -- Queue: 0/20000
+20 dic 2010 17:06:44,623 INFO  [main] bootLogger     - IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@67b0eb2c
+20 dic 2010 17:06:44,623 INFO  [main] bootLogger     - SocketReader started
+20 dic 2010 17:06:44,623 INFO  [main] bootLogger     - SocketAcceptor initialized
+20 dic 2010 17:06:44,625 INFO  [main] bootLogger     - Socket Writer started (pool size:1)
+20 dic 2010 17:06:44,625 INFO  [Scheduler1-thread-1] bootLogger     - Scheduler started: scheduler
+20 dic 2010 17:06:44,628 INFO  [main] bootLogger     - Security Manager started
+20 dic 2010 17:06:44,631 INFO  [main] bootLogger     - [[[ ===--- Boot sequence complete ---=== ]]]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/scala-library.jar"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/sfs2x-admin.jar"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/sfs2x-core.jar"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/sfs2x-util.jar"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/sfs2x.jar"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/slf4j-api-1.5.10.jar"/>
+	<classpathentry kind="lib" path="/Users/holmgard/Desktop/NordicGameJam2012/SFSInstall/SFS2X/lib/slf4j-log4j12.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

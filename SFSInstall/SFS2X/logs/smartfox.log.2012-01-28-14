@@ -1,0 +1,80 @@
+28 Jan 2012 14:31:22,056 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 4, Type: DEFAULT, Logged: No, IP: 127.0.0.1:60968 } on Server port: 9933 <---> 60968
+28 Jan 2012 14:31:22,081 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 14:31:22,364 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 14:31:22,364 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 2, Priv: 0, Sess: 127.0.0.1:60968 ) 
+28 Jan 2012 14:31:22,479 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 14:31:22,479 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: The Lobby
+28 Jan 2012 14:31:22,480 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 14:33:27,709 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 4, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:60968 }
+28 Jan 2012 14:33:27,710 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 14:33:27,711 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 2, Priv: 0, Sess: 127.0.0.1:60968 ) 
+28 Jan 2012 14:35:12,258 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 5, Type: DEFAULT, Logged: No, IP: 127.0.0.1:60971 } on Server port: 9933 <---> 60971
+28 Jan 2012 14:35:12,286 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 14:35:12,565 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 14:35:12,565 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 3, Priv: 0, Sess: 127.0.0.1:60971 ) 
+28 Jan 2012 14:35:12,679 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 14:35:12,679 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: The Lobby
+28 Jan 2012 14:35:12,679 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 14:35:15,942 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 5, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:60971 }
+28 Jan 2012 14:35:15,943 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 14:35:15,943 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 3, Priv: 0, Sess: 127.0.0.1:60971 ) 
+28 Jan 2012 14:38:16,383 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 6, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61030 } on Server port: 9933 <---> 61030
+28 Jan 2012 14:38:16,412 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 14:38:16,686 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 14:38:16,687 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 4, Priv: 0, Sess: 127.0.0.1:61030 ) 
+28 Jan 2012 14:38:16,760 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 14:38:16,760 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: The Lobby
+28 Jan 2012 14:38:16,760 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 14:38:21,891 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 6, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61030 }
+28 Jan 2012 14:38:21,892 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 14:38:21,892 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 4, Priv: 0, Sess: 127.0.0.1:61030 ) 
+28 Jan 2012 14:39:08,100 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 7, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61032 } on Server port: 9933 <---> 61032
+28 Jan 2012 14:39:08,123 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 14:39:08,392 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 14:39:08,393 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 5, Priv: 0, Sess: 127.0.0.1:61032 ) 
+28 Jan 2012 14:39:08,463 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 14:39:08,463 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: The Lobby
+28 Jan 2012 14:39:08,464 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 14:39:44,841 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 7, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61032 }
+28 Jan 2012 14:39:44,842 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 14:39:44,842 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 5, Priv: 0, Sess: 127.0.0.1:61032 ) 

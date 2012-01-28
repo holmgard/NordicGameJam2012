@@ -1,0 +1,5 @@
+# Use -Dlog4j.debug for Log4J startup debugging info
+# Use -Dsfs2x.system.lms.godmode=true for unlimited RC license
+# Use -Xms512M -Xmx512M to start with lots of memory
+cd ../../../
+java -cp  "./:build/:lib/*:lib/Jetty/*:extensions/__lib__/*" -Dfile.encoding=UTF-8  com.smartfoxserver.v2.Main $1 $2

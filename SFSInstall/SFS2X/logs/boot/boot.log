@@ -1,0 +1,175 @@
+28 Jan 2012 12:28:32,315 INFO  [main] bootLogger     - SmartFoxServer 2X
+28 Jan 2012 12:28:32,319 INFO  [main] bootLogger     - BitSwarmEngine version: 3.3.1 { main }
+28 Jan 2012 12:28:32,320 INFO  [main] bootLogger     - System Info:
+	Processor(s): 4
+	VM Max. memory: 129MB
+	os.name: Mac OS X
+	os.arch: x86_64
+	os.version: 10.7.2
+	java.version: 1.6.0_29
+	java.vendor: Apple Inc.
+	java.vendor.url: http://www.apple.com/
+	java.vm.specification.version: 1.0
+	java.vm.version: 20.4-b02-402
+	java.vm.vendor: Apple Inc.
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: /var/folders/br/qxx9tgbn46n1vqw9rxs_gp340000gn/T/
+	Default charset: UTF-8
+
+28 Jan 2012 12:28:32,322 INFO  [main] bootLogger     - Network Info:
+	Card: en1
+		 ->fe80:0:0:0:5ab0:35ff:fe77:55b3%5
+		 ->192.168.1.110
+	Card: en0
+		 ->fe80:0:0:0:5ab0:35ff:fef3:7ab1%4
+		 ->130.226.140.61
+	Card: lo0
+		 ->0:0:0:0:0:0:0:1
+		 ->fe80:0:0:0:0:0:0:1%1
+		 ->127.0.0.1
+
+28 Jan 2012 12:28:32,328 INFO  [main] bootLogger     - Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@65e600bf
+28 Jan 2012 12:28:32,335 INFO  [main] bootLogger     - ReaderSelector opened
+28 Jan 2012 12:28:32,346 INFO  [main] bootLogger     - AcceptSelector opened
+28 Jan 2012 12:28:32,350 INFO  [main] bootLogger     - Added bound tcp socket --> 127.0.0.1:9933
+28 Jan 2012 12:28:32,351 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.SystemController -- Queue: 0/20000
+28 Jan 2012 12:28:32,352 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.ExtensionController -- Queue: 0/20000
+28 Jan 2012 12:28:32,356 INFO  [main] bootLogger     - IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@fda5bfa
+28 Jan 2012 12:28:32,357 INFO  [main] bootLogger     - SocketReader started
+28 Jan 2012 12:28:32,357 INFO  [main] bootLogger     - SocketAcceptor initialized
+28 Jan 2012 12:28:32,359 INFO  [main] bootLogger     - Socket Writer started (pool size:1)
+28 Jan 2012 12:28:32,359 INFO  [Scheduler1-thread-1] bootLogger     - Scheduler started: scheduler
+28 Jan 2012 12:28:32,363 INFO  [main] bootLogger     - Security Manager started
+28 Jan 2012 12:28:32,365 INFO  [main] bootLogger     - [[[ ===--- Boot sequence complete ---=== ]]]
+28 Jan 2012 12:46:20,153 INFO  [main] bootLogger     - SmartFoxServer 2X
+28 Jan 2012 12:46:20,155 INFO  [main] bootLogger     - BitSwarmEngine version: 3.3.1 { main }
+28 Jan 2012 12:46:20,156 INFO  [main] bootLogger     - System Info:
+	Processor(s): 4
+	VM Max. memory: 129MB
+	os.name: Mac OS X
+	os.arch: x86_64
+	os.version: 10.7.2
+	java.version: 1.6.0_29
+	java.vendor: Apple Inc.
+	java.vendor.url: http://www.apple.com/
+	java.vm.specification.version: 1.0
+	java.vm.version: 20.4-b02-402
+	java.vm.vendor: Apple Inc.
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: /var/folders/br/qxx9tgbn46n1vqw9rxs_gp340000gn/T/
+	Default charset: UTF-8
+
+28 Jan 2012 12:46:20,157 INFO  [main] bootLogger     - Network Info:
+	Card: en1
+		 ->fe80:0:0:0:5ab0:35ff:fe77:55b3%5
+		 ->192.168.1.110
+	Card: en0
+		 ->fe80:0:0:0:5ab0:35ff:fef3:7ab1%4
+		 ->130.226.140.61
+	Card: lo0
+		 ->0:0:0:0:0:0:0:1
+		 ->fe80:0:0:0:0:0:0:1%1
+		 ->127.0.0.1
+
+28 Jan 2012 12:46:20,163 INFO  [main] bootLogger     - Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@12a518fc
+28 Jan 2012 12:46:20,170 INFO  [main] bootLogger     - ReaderSelector opened
+28 Jan 2012 12:46:20,182 INFO  [main] bootLogger     - AcceptSelector opened
+28 Jan 2012 12:46:20,187 INFO  [main] bootLogger     - Added bound tcp socket --> 127.0.0.1:9933
+28 Jan 2012 12:46:20,187 INFO  [main] bootLogger     - Added bound tcp socket --> 192.168.1.110:9933
+28 Jan 2012 12:46:20,191 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.SystemController -- Queue: 0/20000
+28 Jan 2012 12:46:20,194 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.ExtensionController -- Queue: 0/20000
+28 Jan 2012 12:46:20,197 INFO  [main] bootLogger     - IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@751b1e07
+28 Jan 2012 12:46:20,199 INFO  [main] bootLogger     - SocketReader started
+28 Jan 2012 12:46:20,199 INFO  [main] bootLogger     - SocketAcceptor initialized
+28 Jan 2012 12:46:20,200 INFO  [main] bootLogger     - Socket Writer started (pool size:1)
+28 Jan 2012 12:46:20,201 INFO  [Scheduler1-thread-1] bootLogger     - Scheduler started: scheduler
+28 Jan 2012 12:46:20,202 INFO  [main] bootLogger     - Security Manager started
+28 Jan 2012 12:46:20,205 INFO  [main] bootLogger     - [[[ ===--- Boot sequence complete ---=== ]]]
+28 Jan 2012 13:50:47,502 INFO  [main] bootLogger     - SmartFoxServer 2X
+28 Jan 2012 13:50:47,506 INFO  [main] bootLogger     - BitSwarmEngine version: 3.3.1 { main }
+28 Jan 2012 13:50:47,507 INFO  [main] bootLogger     - System Info:
+	Processor(s): 4
+	VM Max. memory: 129MB
+	os.name: Mac OS X
+	os.arch: x86_64
+	os.version: 10.7.2
+	java.version: 1.6.0_29
+	java.vendor: Apple Inc.
+	java.vendor.url: http://www.apple.com/
+	java.vm.specification.version: 1.0
+	java.vm.version: 20.4-b02-402
+	java.vm.vendor: Apple Inc.
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: /var/folders/br/qxx9tgbn46n1vqw9rxs_gp340000gn/T/
+	Default charset: UTF-8
+
+28 Jan 2012 13:50:47,509 INFO  [main] bootLogger     - Network Info:
+	Card: en1
+		 ->fe80:0:0:0:5ab0:35ff:fe77:55b3%5
+		 ->192.168.1.110
+	Card: en0
+		 ->fe80:0:0:0:5ab0:35ff:fef3:7ab1%4
+		 ->130.226.140.61
+	Card: lo0
+		 ->0:0:0:0:0:0:0:1
+		 ->fe80:0:0:0:0:0:0:1%1
+		 ->127.0.0.1
+
+28 Jan 2012 13:50:47,515 INFO  [main] bootLogger     - Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@2b96978f
+28 Jan 2012 13:50:47,522 INFO  [main] bootLogger     - ReaderSelector opened
+28 Jan 2012 13:50:47,540 INFO  [main] bootLogger     - AcceptSelector opened
+28 Jan 2012 13:50:47,544 INFO  [main] bootLogger     - Added bound tcp socket --> 127.0.0.1:9933
+28 Jan 2012 13:50:47,544 INFO  [main] bootLogger     - Added bound tcp socket --> 192.168.1.110:9933
+28 Jan 2012 13:50:47,546 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.SystemController -- Queue: 0/20000
+28 Jan 2012 13:50:47,546 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.ExtensionController -- Queue: 0/20000
+28 Jan 2012 13:50:47,547 INFO  [main] bootLogger     - IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@7ad2093b
+28 Jan 2012 13:50:47,547 INFO  [main] bootLogger     - SocketReader started
+28 Jan 2012 13:50:47,548 INFO  [main] bootLogger     - SocketAcceptor initialized
+28 Jan 2012 13:50:47,548 INFO  [main] bootLogger     - Socket Writer started (pool size:1)
+28 Jan 2012 13:50:47,548 INFO  [Scheduler1-thread-1] bootLogger     - Scheduler started: scheduler
+28 Jan 2012 13:50:47,549 INFO  [main] bootLogger     - Security Manager started
+28 Jan 2012 13:50:47,553 INFO  [main] bootLogger     - [[[ ===--- Boot sequence complete ---=== ]]]
+28 Jan 2012 15:16:33,458 INFO  [main] bootLogger     - SmartFoxServer 2X
+28 Jan 2012 15:16:33,463 INFO  [main] bootLogger     - BitSwarmEngine version: 3.3.1 { main }
+28 Jan 2012 15:16:33,465 INFO  [main] bootLogger     - System Info:
+	Processor(s): 4
+	VM Max. memory: 129MB
+	os.name: Mac OS X
+	os.arch: x86_64
+	os.version: 10.7.2
+	java.version: 1.6.0_29
+	java.vendor: Apple Inc.
+	java.vendor.url: http://www.apple.com/
+	java.vm.specification.version: 1.0
+	java.vm.version: 20.4-b02-402
+	java.vm.vendor: Apple Inc.
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: /var/folders/br/qxx9tgbn46n1vqw9rxs_gp340000gn/T/
+	Default charset: UTF-8
+
+28 Jan 2012 15:16:33,467 INFO  [main] bootLogger     - Network Info:
+	Card: en1
+		 ->fe80:0:0:0:5ab0:35ff:fe77:55b3%5
+		 ->192.168.1.110
+	Card: en0
+		 ->fe80:0:0:0:5ab0:35ff:fef3:7ab1%4
+		 ->130.226.140.61
+	Card: lo0
+		 ->0:0:0:0:0:0:0:1
+		 ->fe80:0:0:0:0:0:0:1%1
+		 ->127.0.0.1
+
+28 Jan 2012 15:16:33,475 INFO  [main] bootLogger     - Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@19bf37e3
+28 Jan 2012 15:16:33,482 INFO  [main] bootLogger     - ReaderSelector opened
+28 Jan 2012 15:16:33,494 INFO  [main] bootLogger     - AcceptSelector opened
+28 Jan 2012 15:16:33,498 INFO  [main] bootLogger     - Added bound tcp socket --> 127.0.0.1:9933
+28 Jan 2012 15:16:33,498 INFO  [main] bootLogger     - Added bound tcp socket --> 192.168.1.110:9933
+28 Jan 2012 15:16:33,500 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.SystemController -- Queue: 0/20000
+28 Jan 2012 15:16:33,501 INFO  [main] bootLogger     - Controller started: com.smartfoxserver.v2.controllers.ExtensionController -- Queue: 0/20000
+28 Jan 2012 15:16:33,503 INFO  [main] bootLogger     - IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@262f4873
+28 Jan 2012 15:16:33,503 INFO  [main] bootLogger     - SocketReader started
+28 Jan 2012 15:16:33,504 INFO  [main] bootLogger     - SocketAcceptor initialized
+28 Jan 2012 15:16:33,504 INFO  [main] bootLogger     - Socket Writer started (pool size:1)
+28 Jan 2012 15:16:33,504 INFO  [Scheduler1-thread-1] bootLogger     - Scheduler started: scheduler
+28 Jan 2012 15:16:33,506 INFO  [main] bootLogger     - Security Manager started
+28 Jan 2012 15:16:33,508 INFO  [main] bootLogger     - [[[ ===--- Boot sequence complete ---=== ]]]

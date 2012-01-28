@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>...:::[[ SFS2X Preview Documentation ]]:::...</title>
+	<meta name="author" content="gotoAndPlay()">
+	<link rel="stylesheet" href="main.css" type="text/css" media="screen" title="main styles" charset="utf-8">
+</head>
+<body>
+	<div id="logo"><img src="images/sfs2x-logo.png" border="0" width="347" height="60" alt="Sfs2x Logo"></div>
+
+	<div id="main">
+		<br>
+		<h2>&raquo; Examples Overview</h2>
+		<p>
+			<strong>&raquo; Flash Examples:</strong>
+			<ul>
+				<li>
+					<strong>SFS2X-Connector</strong>: this is the most simple SFS2X application possible. It just creates the <strong>SmartFox</strong> object, load the external configuration and connect to the server
+				</li>
+				<br>
+				<li>
+					<strong>SFS2X-SimpleChat</strong>: a simple chat application that demonstrates the fundamental requests such as login, joining rooms, sending chat messages, creating a new Room, disconnecting.
+				</li>
+				<br>
+				<li>
+					<strong>SFS2X-AdvancedChat</strong>: the application extends the previous chat by introducing the Room Groups. 
+					In this example you will be watching the events of two different Groups called <strong>default</strong> and <strong>chat</strong>.
+					The application also demonstrates the new Room commands for changing name, password and size of a Room at runtime. Private chatting is also included.
+				</li>
+				<br>
+				<li>
+					<strong>SFS2X-Tris</strong>: this demo shows the process to build a complete turn-based game with server side logic. Thanks to the free <strong>SmartFoxBits2</strong> UI components distributed in this
+					release you will be able to build the Lobby in a snap and reduce the boilerplate code by a large degree. All the common UI logic (room list, user list, chatting) will be handled by the components while you can
+					concentrate on the game itself. The server side source code is also included.
+				</li>
+				<br>
+				<li>
+					<strong>SFS2X-Lobby</strong>: this example showcases some of the new Game API features. You can create public games that require Users to have certain prerequisistes to join the game. 
+					Or you can create a private Game and at the same time invite other online friends to join and play.
+					<br><br>
+					This is an example of how you can check the Public Games:
+					<br>
+					<ul>
+						<li>Once logged in choose your <strong>country</strong> and <strong>ranking</strong> from the <em>My Player Details</em> panel</li>
+						<li>Now create a new <strong>public</strong> Game Room. The Room will be configured to accept Users from the same country as yours and with a raking greater or equal to yours</li>
+						<li>Now launch another client and try joining the Room, you will see that the join will be refused if the User doesn&#x27;t match the Room settings</li>
+						<li>Also notice that the Game started/stopped status is kept updated in the Lobby for the other Users outside the Game</li>
+					</ul>
+					<br>
+					This is an example of how you can check the Private Games:
+					<br>
+					<ul>
+						<li>Start 3 instances of the example with three different Users, say Kermit, Piggy and Gonzo</li>
+						<li>Let Gonzo create a private game and select Kermit and Piggy as invited players in the Game</li>
+						<li>When you create the game both Kermit and Piggy will be notified of the invitation. If they will accept the invitation on time they will be joined and the Game will start.</li>
+					</ul>
+				</li>
+				<br>
+				You can learn more details abou the <strong>Game API</strong> in the specific article provided with this documentation.
+			</ul>
+			
+			<strong>&raquo; Unity3D Examples:</strong>
+			<ul>
+				<li>
+					<strong>Unity Connector</strong>: this is the most simple SFS2X application possible. It just creates the <strong>SmartFox</strong> object and connect to the server showing the result.
+				</li>
+				<br>
+				
+				<li>
+					<strong>Unity SimpleLobby</strong>: a simple chat application that demonstrates the fundamental requests such as login, joining rooms, sending chat messages, creating a new Room, disconnecting.
+				</li>
+				<br>
+				
+				<li>
+					<strong>Unity SFS2XTris</strong>: this demo shows the process to build a complete turn-based game with server side logic. It is the equivalent of the SFS2XTris done in Flash only with a much cooler 3D game board!
+					You can start two clients and play a match, you could also compete against a Flash client. The example talks to the the same server Extension used in the Flash example.
+				</li>
+				<br>
+			</ul>
+		</p>
+		
+		<h2>&raquo; Importing Flex-based examples in Flex Builder</h2>
+		<p>
+			With the exclusion of the Connector example all other examples were mostly written in <strong>Flash Builder 4</strong> using the Flex Framework 3.5 which ensure compatibility with the previouse <strong>Flex Builder 3</strong>
+		</p>
+		<p>The Flex projects were exported as zipped archives. This is how you can import them in Flex/Flash Builder:</p>
+		<ul>
+			<li>From the main menu select <strong>File</strong> &raquo; <strong>Import</strong> &raquo; <strong>Flex Project...</strong></li>
+			<li>In the dialogue box choose <strong>Archive File</strong> and browse to the location of the <strong>.zip</strong> file you want to import</li>
+			<li>Click <strong>Finish</strong> and you are done.</li>
+		</ul>
+		<p>The Connector example requires Flash CS4 or higher.</p>
+		<a href="index.html">&laquo; back to index</a>
+		<p>&nbsp;</p>
+	</div>
+</body>
+</html>

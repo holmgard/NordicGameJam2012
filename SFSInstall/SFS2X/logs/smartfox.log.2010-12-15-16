@@ -1,0 +1,80 @@
+15 dic 2010 16:33:46,138 INFO  [main] smartfoxserver.v2.SmartFoxServer     - Boot sequence starts...
+15 dic 2010 16:33:46,149 INFO  [main] smartfoxserver.v2.SmartFoxServer     - 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+15 dic 2010 16:33:46,584 INFO  [main] smartfoxserver.v2.SmartFoxServer     - License code not found, starting Community Edition license
+15 dic 2010 16:33:46,584 INFO  [main] v2.core.SFSEventManager     - AnonymousService-1 initalized
+15 dic 2010 16:33:46,624 INFO  [main] vfs.impl.DefaultFileReplicator     - Using "/var/folders/Eg/EgFR68qKFh46MT9+EAsrSU+++TM/-Tmp-/vfs_cache" as temporary files store.
+15 dic 2010 16:33:46,722 INFO  [main] smartfoxserver.v2.SmartFoxServer     - License loaded
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+15 dic 2010 16:33:46,724 INFO  [main] entities.managers.SFSBannedUserStorage     - BanUserStorage initialized
+15 dic 2010 16:33:46,751 INFO  [main] entities.managers.SFSBannedUserManager     - BanUser data loaded: 0 records.
+15 dic 2010 16:33:46,789 INFO  [main] v2.config.SFSConfigurator     - Loading: zones/GameLobby.zone.xml
+15 dic 2010 16:33:46,823 INFO  [main] v2.config.SFSConfigurator     - Loading: zones/SimpleChat.zone.xml
+15 dic 2010 16:33:46,851 INFO  [main] entities.managers.SFSZoneManager     - 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: GameLobby 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 dic 2010 16:33:46,894 INFO  [main] entities.managers.SFSZoneManager     - Creating room: (default) The Lobby
+15 dic 2010 16:33:46,920 INFO  [main] v2.api.SFSApi     - Room created: [ Room: The Lobby, Id: 0, Group: default, isGame: false ]
+15 dic 2010 16:33:46,920 INFO  [main] entities.managers.SFSZoneManager     - 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: SimpleChat 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 dic 2010 16:33:46,922 INFO  [main] entities.managers.SFSZoneManager     - Creating room: (default) The Lobby
+15 dic 2010 16:33:46,924 INFO  [main] v2.api.SFSApi     - Room created: [ Room: The Lobby, Id: 1, Group: default, isGame: false ]
+15 dic 2010 16:33:46,935 INFO  [main] Extensions     - {sfsTris}: SFSTris2X Extension started, rel. 1.0.5 
+15 dic 2010 16:33:46,944 INFO  [main] v2.api.SFSApi     - Room created: [ Room: AdminRoom, Id: 2, Group: default, isGame: false ]
+15 dic 2010 16:33:46,948 INFO  [main] v2.core.AdminToolService     - AdminTool Service started
+15 dic 2010 16:33:48,267 INFO  [main] v2.http.SFSHttpServer     - Http Server started.
+15 dic 2010 16:33:48,344 INFO  [main] smartfoxserver.v2.SmartFoxServer     - Listening Sockets: { 127.0.0.1:9933, (Tcp) } 
+15 dic 2010 16:33:48,344 INFO  [main] smartfoxserver.v2.SmartFoxServer     -  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.0.0-RC1b#4 ] 
+
+15 dic 2010 16:33:48,346 INFO  [main] smartfoxserver.v2.SmartFoxServer     - SmartFoxServer 2X (2.0.0-RC1b#4) READY!
+15 dic 2010 16:34:08,052 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 127.0.0.1:58286 } on Server port: 9933 <---> 58286
+15 dic 2010 16:34:08,085 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+15 dic 2010 16:34:08,155 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+15 dic 2010 16:34:08,170 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SimpleChat }, ( User Name: GuestUser#0, Id: 0, Priv: 0, Sess: 127.0.0.1:58286 ) 
+15 dic 2010 16:34:08,183 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+15 dic 2010 16:34:47,838 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:58286 }
+15 dic 2010 16:34:47,839 INFO  [SocketReader] v2.entities.SFSZone     - User: GuestUser#0 was disconnected.
+15 dic 2010 16:34:47,840 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: GuestUser#0, Id: 0, Priv: 0, Sess: 127.0.0.1:58286 ) 
+15 dic 2010 16:34:55,050 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 2, Type: DEFAULT, Logged: No, IP: 127.0.0.1:58308 } on Server port: 9933 <---> 58308
+15 dic 2010 16:34:55,079 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+15 dic 2010 16:34:55,093 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+15 dic 2010 16:34:55,094 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SimpleChat }, ( User Name: GuestUser#1, Id: 1, Priv: 0, Sess: 127.0.0.1:58308 ) 
+15 dic 2010 16:34:55,106 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+15 dic 2010 16:35:02,425 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 2, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:58308 }
+15 dic 2010 16:35:02,426 INFO  [SocketReader] v2.entities.SFSZone     - User: GuestUser#1 was disconnected.
+15 dic 2010 16:35:02,426 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: GuestUser#1, Id: 1, Priv: 0, Sess: 127.0.0.1:58308 ) 
+15 dic 2010 16:35:27,590 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 3, Type: DEFAULT, Logged: No, IP: 127.0.0.1:58315 } on Server port: 9933 <---> 58315
+15 dic 2010 16:35:27,623 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+15 dic 2010 16:35:27,639 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+15 dic 2010 16:35:27,640 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SimpleChat }, ( User Name: GuestUser#2, Id: 2, Priv: 0, Sess: 127.0.0.1:58315 ) 
+15 dic 2010 16:35:27,651 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+15 dic 2010 16:35:33,647 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 3, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:58315 }
+15 dic 2010 16:35:33,648 INFO  [SocketReader] v2.entities.SFSZone     - User: GuestUser#2 was disconnected.
+15 dic 2010 16:35:33,648 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: GuestUser#2, Id: 2, Priv: 0, Sess: 127.0.0.1:58315 ) 

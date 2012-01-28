@@ -1,0 +1,23 @@
+Application
+{
+	background-color: #444444;
+}
+
+Panel
+{
+	border-alpha: 1;
+}
+
+.mainView
+{
+	padding-bottom: 15;
+	padding-top: 15;
+	padding-left: 15;
+	padding-right: 15;
+}
+
+.footer
+{
+	background-color: #71408A;
+	color: #FFFFFF;
+}

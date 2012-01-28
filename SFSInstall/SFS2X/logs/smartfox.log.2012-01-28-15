@@ -1,0 +1,260 @@
+28 Jan 2012 15:10:26,385 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 8, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61106 } on Server port: 9933 <---> 61106
+28 Jan 2012 15:10:26,412 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:10:26,746 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:10:26,746 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 6, Priv: 0, Sess: 127.0.0.1:61106 ) 
+28 Jan 2012 15:10:26,824 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:10:26,824 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: The Lobby
+28 Jan 2012 15:10:26,825 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 15:10:39,984 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 9, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61108 } on Server port: 9933 <---> 61108
+28 Jan 2012 15:10:39,992 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:10:40,006 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:10:40,006 INFO  [pool-1-thread-1] v2.api.SFSApi     - Login error: Another user is already logged with the same name: sfsadmin. Requested by: { Id: 9, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61108 }
+28 Jan 2012 15:10:40,138 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 9, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61108 }
+28 Jan 2012 15:10:43,108 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 10, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61109 } on Server port: 9933 <---> 61109
+28 Jan 2012 15:10:43,146 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:10:43,171 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:10:43,172 INFO  [pool-1-thread-2] v2.api.SFSApi     - Login error: Another user is already logged with the same name: sfsadmin. Requested by: { Id: 10, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61109 }
+28 Jan 2012 15:10:43,305 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 10, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61109 }
+28 Jan 2012 15:10:49,348 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 11, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61114 } on Server port: 9933 <---> 61114
+28 Jan 2012 15:10:49,353 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:10:49,395 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:10:49,396 INFO  [pool-1-thread-1] v2.api.SFSApi     - Login error: Another user is already logged with the same name: sfsadmin. Requested by: { Id: 11, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61114 }
+28 Jan 2012 15:10:49,555 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 11, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61114 }
+28 Jan 2012 15:11:09,270 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 12, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61126 } on Server port: 9933 <---> 61126
+28 Jan 2012 15:11:09,354 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 12, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61126 }
+28 Jan 2012 15:11:09,388 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 13, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61127 } on Server port: 9933 <---> 61127
+28 Jan 2012 15:11:09,443 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:11:09,479 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:11:09,480 INFO  [pool-1-thread-2] v2.api.SFSApi     - Login error: Another user is already logged with the same name: sfsadmin. Requested by: { Id: 13, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61127 }
+28 Jan 2012 15:11:09,638 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 13, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61127 }
+28 Jan 2012 15:11:28,192 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: SetUserVariables
+28 Jan 2012 15:11:51,157 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 8, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61106 }
+28 Jan 2012 15:11:51,158 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:11:51,158 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 6, Priv: 0, Sess: 127.0.0.1:61106 ) 
+28 Jan 2012 15:12:20,514 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 14, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61133 } on Server port: 9933 <---> 61133
+28 Jan 2012 15:12:20,540 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:12:20,956 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:12:20,957 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 7, Priv: 0, Sess: 127.0.0.1:61133 ) 
+28 Jan 2012 15:12:21,018 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:12:21,018 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: Game1
+28 Jan 2012 15:12:21,019 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 15:12:26,411 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 14, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61133 }
+28 Jan 2012 15:12:26,412 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:12:26,412 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 7, Priv: 0, Sess: 127.0.0.1:61133 ) 
+28 Jan 2012 15:12:40,254 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 15, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61135 } on Server port: 9933 <---> 61135
+28 Jan 2012 15:12:40,279 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:12:40,695 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:12:40,696 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 8, Priv: 0, Sess: 127.0.0.1:61135 ) 
+28 Jan 2012 15:12:40,786 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:12:40,786 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: Game1
+28 Jan 2012 15:12:40,787 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 15:12:52,806 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 15, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61135 }
+28 Jan 2012 15:12:52,807 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:12:52,807 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 8, Priv: 0, Sess: 127.0.0.1:61135 ) 
+28 Jan 2012 15:15:37,930 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 16, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61138 } on Server port: 9933 <---> 61138
+28 Jan 2012 15:15:37,956 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:15:38,276 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:15:38,276 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 9, Priv: 0, Sess: 127.0.0.1:61138 ) 
+28 Jan 2012 15:15:38,431 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:15:38,431 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] controllers.system.JoinRoom     - Client requested non exixtent Room with name: Game1
+28 Jan 2012 15:15:38,432 WARN  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - 
+com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:795)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:676)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:83)
+	com.smartfoxserver.v2.controllers.SystemController.processRequest(SystemController.java:127)
+	com.smartfoxserver.bitswarm.controllers.AbstractController.run(AbstractController.java:96)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	java.lang.Thread.run(Thread.java:680)
+
+28 Jan 2012 15:15:51,721 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: SetUserVariables
+28 Jan 2012 15:15:52,134 WARN  [1233629831@qtp-1708966563-6] org.mortbay.log     - Aliased resource: file:/Applications/SFS2X-RC1a/SFS2X/www/root/admin/assets/icons/tabs/iPFilter.png==file:/Applications/SFS2X-RC1a/SFS2X/www/root/admin/assets/icons/tabs/ipFilter.png
+28 Jan 2012 15:15:52,135 WARN  [1233629831@qtp-1708966563-6] org.mortbay.log     - Aliased resource: file:/Applications/SFS2X-RC1a/SFS2X/www/root/admin/assets/icons/tabs/iPFilter.png==file:/Applications/SFS2X-RC1a/SFS2X/www/root/admin/assets/icons/tabs/ipFilter.png
+28 Jan 2012 15:15:54,804 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: SetUserVariables
+28 Jan 2012 15:16:05,589 WARN  [SFS2X ShutdownHook] v2.core.SFSShutdownHook     - SFS2X is shutting down. The process may take a few seconds...
+28 Jan 2012 15:16:05,590 INFO  [Thread-1] entities.managers.SFSZoneManager     - BuddyList saveAll...
+28 Jan 2012 15:16:05,593 INFO  [Thread-2] entities.managers.SFSBannedUserManager     - BanUser data saved.
+28 Jan 2012 15:16:31,753 INFO  [main] smartfoxserver.v2.SmartFoxServer     - Boot sequence starts...
+28 Jan 2012 15:16:31,764 INFO  [main] smartfoxserver.v2.SmartFoxServer     - 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+28 Jan 2012 15:16:32,156 INFO  [main] smartfoxserver.v2.SmartFoxServer     - License code not found, starting Community Edition license
+28 Jan 2012 15:16:32,157 INFO  [main] v2.core.SFSEventManager     - AnonymousService-1 initalized
+28 Jan 2012 15:16:32,187 INFO  [main] vfs.impl.DefaultFileReplicator     - Using "/var/folders/br/qxx9tgbn46n1vqw9rxs_gp340000gn/T/vfs_cache" as temporary files store.
+28 Jan 2012 15:16:32,265 INFO  [main] smartfoxserver.v2.SmartFoxServer     - License loaded
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+28 Jan 2012 15:16:32,266 INFO  [main] entities.managers.SFSBannedUserStorage     - BanUserStorage initialized
+28 Jan 2012 15:16:32,279 INFO  [main] entities.managers.SFSBannedUserManager     - BanUser data loaded: 0 records.
+28 Jan 2012 15:16:32,291 INFO  [main] v2.config.SFSConfigurator     - Loading: zones/GameLobby.zone.xml
+28 Jan 2012 15:16:32,326 INFO  [main] v2.config.SFSConfigurator     - Loading: zones/SimpleChat.zone.xml
+28 Jan 2012 15:16:32,351 INFO  [main] v2.config.SFSConfigurator     - Loading: zones/SnakeClub.zone.xml
+28 Jan 2012 15:16:32,376 INFO  [main] entities.managers.SFSZoneManager     - 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: GameLobby 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+28 Jan 2012 15:16:32,401 INFO  [main] entities.managers.SFSZoneManager     - Creating room: (default) The Lobby
+28 Jan 2012 15:16:32,410 INFO  [main] v2.api.SFSApi     - Room created: [ Room: The Lobby, Id: 0, Group: default, isGame: false ]
+28 Jan 2012 15:16:32,411 INFO  [main] entities.managers.SFSZoneManager     - 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: SimpleChat 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+28 Jan 2012 15:16:32,413 INFO  [main] entities.managers.SFSZoneManager     - Creating room: (default) The Lobby
+28 Jan 2012 15:16:32,414 INFO  [main] v2.api.SFSApi     - Room created: [ Room: The Lobby, Id: 1, Group: default, isGame: false ]
+28 Jan 2012 15:16:32,424 INFO  [main] Extensions     - {sfsTris}: SFSTris2X Extension started, rel. 1.0.5 
+28 Jan 2012 15:16:32,429 INFO  [main] entities.managers.SFSZoneManager     - 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: SnakeClub 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+28 Jan 2012 15:16:32,431 INFO  [main] entities.managers.SFSZoneManager     - Creating room: (default) Game1
+28 Jan 2012 15:16:32,431 INFO  [main] v2.api.SFSApi     - Room created: [ Room: Game1, Id: 2, Group: default, isGame: false ]
+28 Jan 2012 15:16:32,441 INFO  [main] v2.api.SFSApi     - Room created: [ Room: AdminRoom, Id: 3, Group: default, isGame: false ]
+28 Jan 2012 15:16:32,445 INFO  [main] v2.core.AdminToolService     - AdminTool Service started
+28 Jan 2012 15:16:33,457 INFO  [main] v2.http.SFSHttpServer     - Http Server started.
+28 Jan 2012 15:16:33,509 INFO  [main] smartfoxserver.v2.SmartFoxServer     - Listening Sockets: { 127.0.0.1:9933, (Tcp) } { 192.168.1.110:9933, (Tcp) } 
+28 Jan 2012 15:16:33,510 INFO  [main] smartfoxserver.v2.SmartFoxServer     -  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.0.0-RC1b ] 
+
+28 Jan 2012 15:16:33,513 INFO  [main] smartfoxserver.v2.SmartFoxServer     - SmartFoxServer 2X (2.0.0-RC1b) READY!
+28 Jan 2012 15:16:42,614 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61160 } on Server port: 9933 <---> 61160
+28 Jan 2012 15:16:42,641 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:16:42,867 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:16:42,872 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 0, Priv: 0, Sess: 127.0.0.1:61160 ) 
+28 Jan 2012 15:16:42,956 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:16:49,334 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61160 }
+28 Jan 2012 15:16:49,335 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:16:49,336 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 0, Priv: 0, Sess: 127.0.0.1:61160 ) 
+28 Jan 2012 15:22:25,590 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 2, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61232 } on Server port: 9933 <---> 61232
+28 Jan 2012 15:22:25,614 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:22:25,982 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:22:25,982 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 1, Priv: 0, Sess: 127.0.0.1:61232 ) 
+28 Jan 2012 15:22:26,026 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:22:29,580 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 2, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61232 }
+28 Jan 2012 15:22:29,580 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:22:29,581 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 1, Priv: 0, Sess: 127.0.0.1:61232 ) 
+28 Jan 2012 15:49:11,780 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 3, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61327 } on Server port: 9933 <---> 61327
+28 Jan 2012 15:49:11,805 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:49:12,131 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:49:12,131 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 2, Priv: 0, Sess: 127.0.0.1:61327 ) 
+28 Jan 2012 15:49:12,219 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:49:17,474 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 3, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61327 }
+28 Jan 2012 15:49:17,475 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:49:17,475 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 2, Priv: 0, Sess: 127.0.0.1:61327 ) 
+28 Jan 2012 15:49:27,106 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 4, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61330 } on Server port: 9933 <---> 61330
+28 Jan 2012 15:49:27,130 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:49:27,466 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:49:27,467 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 3, Priv: 0, Sess: 127.0.0.1:61330 ) 
+28 Jan 2012 15:49:27,546 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:49:40,970 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 4, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61330 }
+28 Jan 2012 15:49:40,970 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:49:40,971 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 3, Priv: 0, Sess: 127.0.0.1:61330 ) 
+28 Jan 2012 15:49:51,598 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 5, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61336 } on Server port: 9933 <---> 61336
+28 Jan 2012 15:49:51,626 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:49:51,921 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:49:51,921 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 4, Priv: 0, Sess: 127.0.0.1:61336 ) 
+28 Jan 2012 15:49:52,061 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:50:02,625 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 5, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61336 }
+28 Jan 2012 15:50:02,626 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:50:02,626 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 4, Priv: 0, Sess: 127.0.0.1:61336 ) 
+28 Jan 2012 15:50:04,331 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 6, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61337 } on Server port: 9933 <---> 61337
+28 Jan 2012 15:50:04,358 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:50:05,021 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:50:05,022 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 5, Priv: 0, Sess: 127.0.0.1:61337 ) 
+28 Jan 2012 15:50:05,161 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:50:08,811 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 6, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61337 }
+28 Jan 2012 15:50:08,812 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:50:08,812 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 5, Priv: 0, Sess: 127.0.0.1:61337 ) 
+28 Jan 2012 15:50:57,536 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 7, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61339 } on Server port: 9933 <---> 61339
+28 Jan 2012 15:50:57,558 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:50:58,239 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:50:58,239 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 6, Priv: 0, Sess: 127.0.0.1:61339 ) 
+28 Jan 2012 15:50:58,388 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:51:01,822 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 7, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61339 }
+28 Jan 2012 15:51:01,823 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:51:01,823 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 6, Priv: 0, Sess: 127.0.0.1:61339 ) 
+28 Jan 2012 15:51:15,448 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 8, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61341 } on Server port: 9933 <---> 61341
+28 Jan 2012 15:51:15,472 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:51:16,145 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:51:16,146 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 7, Priv: 0, Sess: 127.0.0.1:61341 ) 
+28 Jan 2012 15:51:16,260 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:51:17,213 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 8, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61341 }
+28 Jan 2012 15:51:17,214 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:51:17,214 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 7, Priv: 0, Sess: 127.0.0.1:61341 ) 
+28 Jan 2012 15:51:31,920 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 9, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61343 } on Server port: 9933 <---> 61343
+28 Jan 2012 15:51:31,944 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:51:32,632 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:51:32,632 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 8, Priv: 0, Sess: 127.0.0.1:61343 ) 
+28 Jan 2012 15:51:32,790 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:51:33,790 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 9, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61343 }
+28 Jan 2012 15:51:33,791 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:51:33,791 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 8, Priv: 0, Sess: 127.0.0.1:61343 ) 
+28 Jan 2012 15:52:29,975 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 10, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61345 } on Server port: 9933 <---> 61345
+28 Jan 2012 15:52:30,000 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:52:30,732 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:52:30,733 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 9, Priv: 0, Sess: 127.0.0.1:61345 ) 
+28 Jan 2012 15:52:30,915 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:52:39,611 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 10, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61345 }
+28 Jan 2012 15:52:39,612 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:52:39,612 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 9, Priv: 0, Sess: 127.0.0.1:61345 ) 
+28 Jan 2012 15:53:22,003 INFO  [SocketReader] bitswarm.core.SocketAcceptor     - Session created: { Id: 11, Type: DEFAULT, Logged: No, IP: 127.0.0.1:61348 } on Server port: 9933 <---> 61348
+28 Jan 2012 15:53:22,029 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Handshake
+28 Jan 2012 15:53:22,687 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: Login
+28 Jan 2012 15:53:22,688 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.api.SFSApi     - Login in, { Zone: SnakeClub }, ( User Name: username, Id: 10, Priv: 0, Sess: 127.0.0.1:61348 ) 
+28 Jan 2012 15:53:22,835 INFO  [com.smartfoxserver.v2.controllers.SystemController-1] v2.controllers.SystemController     - {IN}: JoinRoom
+28 Jan 2012 15:53:26,911 INFO  [SocketReader] bitswarm.sessions.DefaultSessionManager     - Session removed: { Id: 11, Type: DEFAULT, Logged: Yes, IP: 127.0.0.1:61348 }
+28 Jan 2012 15:53:26,911 INFO  [SocketReader] v2.entities.SFSZone     - User: username was disconnected.
+28 Jan 2012 15:53:26,912 INFO  [SocketReader] v2.api.SFSApi     - User disconnected: ( User Name: username, Id: 10, Priv: 0, Sess: 127.0.0.1:61348 ) 

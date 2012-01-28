@@ -15,7 +15,9 @@ public class SmartFoxListener : MonoBehaviour {
 	public string serverName = "127.0.0.1";
 	public int serverPort = 9933;
 
-	private SmartFox smartFox;
+	public SmartFox smartFox;
+	public GameLogic gl;
+	
 	private string zone = "SimpleChat";
 	private string username = "";
 	private string password = "";
@@ -57,10 +59,13 @@ public class SmartFoxListener : MonoBehaviour {
 		smartFox.AddEventListener(SFSEvent.LOGOUT, OnLogout);
 		smartFox.AddEventListener(SFSEvent.ROOM_JOIN, OnJoinRoom);
 		smartFox.AddEventListener(SFSEvent.PUBLIC_MESSAGE, OnPublicMessage);
+		smartFox.AddEventListener(SFSEvent.EXTENSION_RESPONSE, OnExtensionResponse);
 
 		smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 		
-		smartFox.Connect(serverName, serverPort);
+		//smartFox.Connect(serverName, serverPort);
+		
+		gl = GameObject.FindObjectOfType(typeof(GameLogic)) as GameLogic;
 		
 		Debug.Log(Application.platform.ToString());
 	}
@@ -74,6 +79,12 @@ public class SmartFoxListener : MonoBehaviour {
 	void Update ()
 	{
 		
+	}
+	
+	public void Connect()
+	{
+		Debug.Log("SmartFoxListener going to connect");
+		smartFox.Connect(serverName,serverPort);
 	}
 	
 	private void UnregisterSFSSceneCallbacks() {
@@ -190,6 +201,8 @@ public class SmartFoxListener : MonoBehaviour {
 		
 		currentActiveRoom = room;
 		isJoining = false;
+		
+		gl.OnJoinedRoom();
 	}
 
 	void OnPublicMessage(BaseEvent evt) {
@@ -208,6 +221,11 @@ public class SmartFoxListener : MonoBehaviour {
 		catch (Exception ex) {
 			Debug.Log("Exception handling public message: "+ex.Message+ex.StackTrace);
 		}
+	}
+	
+	public void OnExtensionResponse(BaseEvent evt)
+	{
+		gl.OnExtensionResponse(evt);
 	}
 	
 	public void OnApplicationQuit()

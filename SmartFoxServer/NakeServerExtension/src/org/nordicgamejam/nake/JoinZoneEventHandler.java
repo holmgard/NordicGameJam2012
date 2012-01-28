@@ -17,8 +17,9 @@ public class JoinZoneEventHandler extends BaseServerEventHandler {
 			NakeExtension.nakeGames.add(new NakeGame());
 			NakeExtension.nakeGames.get(0).addPlayer(user);
 		} else if (NakeExtension.nakeGames.size() >= 1) {
-			if(NakeExtension.nakeGames.get(NakeExtension.nakeGames.size()-1).currentPlayers == NakeExtension.nakeGames.get(NakeExtension.nakeGames.size()-1).maxPlayers){
-				
+			if(NakeExtension.nakeGames.get(NakeExtension.nakeGames.size()-1).isFull()){
+				NakeExtension.nakeGames.add(new NakeGame());
+				NakeExtension.nakeGames.get(NakeExtension.nakeGames.size()-1).addPlayer(user);
 			} 
 		}
 		

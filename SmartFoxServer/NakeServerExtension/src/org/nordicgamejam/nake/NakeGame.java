@@ -34,6 +34,14 @@ public class NakeGame {
 		
 	}
 	
+	public boolean isFull()
+	{
+		if(currentPlayers >= maxPlayers)
+			return true;
+		else
+			return false;
+	}
+	
 	public boolean readytoPlay()
 	{
 		if(currentPlayers == readyPlayers)

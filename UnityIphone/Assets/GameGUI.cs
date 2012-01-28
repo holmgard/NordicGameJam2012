@@ -91,12 +91,16 @@ public class GameGUI : MonoBehaviour {
 	
 	private void playing(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
+		if(GUILayout.Button("I was caught"))
+		{
+			gl.State = GameLogic.GameState.caught;
+		}
 		GUILayout.EndArea();
 	}
 	
 	private void caught(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box("And you're out!");
+		GUILayout.Box("You're caught! And you're out!");
 		GUILayout.EndArea();
 	}
 	

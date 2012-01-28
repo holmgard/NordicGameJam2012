@@ -26,7 +26,6 @@ public class GameLogic : MonoBehaviour {
 		
 		smartFoxListener = FindObjectOfType(typeof(SmartFoxListener)) as SmartFoxListener;
 		sm = FindObjectOfType(typeof(SoundManager)) as SoundManager;
-		
 		State = GameState.start;
 	}
 	
@@ -44,25 +43,11 @@ public class GameLogic : MonoBehaviour {
 	
 	public void OnJoinedRoom()
 	{
-		Debug.Log("Room was joined, going to request player type");
-		RequestPlayerType();
+		State = GameLogic.GameState.joining;
+		Debug.Log("Room was joined");
 		Debug.Log("Is SFS connected: " + smartFoxListener.smartFox.IsConnected.ToString());
 	}
-	
-	public void RequestPlayerType()
-	{
-		Debug.Log("Requesting player type");
-		SFSObject dataObject = new SFSObject();
-		dataObject.PutNull("");
-		smartFoxListener.smartFox.Send(new ExtensionRequest("playerTypeRequest",dataObject));
-	}
-	
-	public void RequestTeam()
-	{
-		Debug.Log("Requesting team");
-		smartFoxListener.smartFox.Send(new ExtensionRequest("teamRequest",null));
-	}
-	
+		
 	public void SetTeam(string team)
 	{
 		myTeam = team;

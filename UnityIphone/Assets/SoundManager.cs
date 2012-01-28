@@ -3,16 +3,6 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour {
 	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
 	AudioSource audioSource;
 	
 	public void PlaySound(string soundToPlay)

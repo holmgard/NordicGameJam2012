@@ -42,6 +42,9 @@ public class SmartFoxListener : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		
+		username = "user" + UnityEngine.Random.Range(1,100000).ToString();
+		
 		bool debug = true;
 		if (SmartFoxConnection.IsInitialized)
 		{
@@ -108,7 +111,7 @@ public class SmartFoxListener : MonoBehaviour {
 	public void DoLogin()
 	{
 		Debug.Log("Sending login request");
-		smartFox.Send(new LoginRequest("username", "password", "SnakeClub"));
+		smartFox.Send(new LoginRequest(username, "password", "SnakeClub"));
 	}
 	
 	public void OnConnectionLost(BaseEvent evt) {

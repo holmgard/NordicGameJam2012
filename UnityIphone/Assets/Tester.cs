@@ -22,7 +22,7 @@ public class Tester : MonoBehaviour {
 		{
 			if(sm != null)
 			{
-				sm.PlaySound("Conga");
+				sm.PlaySound("sheep");
 			}
 		}
 	}

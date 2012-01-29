@@ -54,9 +54,9 @@ public class GameGUI : MonoBehaviour {
 	private void start()
 	{
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box("Are you ready to play?");
-		if(GUILayout.Button("READY!"))
-		{
+		GUILayout.Box("Are you ready to play?",GUILayout.MinHeight(150f));
+		if(GUILayout.Button("READY!",GUILayout.MinHeight(150f)))
+		   {
 			gl.OnReadyToJoin();
 		}
 		GUILayout.EndArea();
@@ -65,7 +65,7 @@ public class GameGUI : MonoBehaviour {
 	private void joining()
 	{
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box("Joining game...");
+		GUILayout.Box("Joining game...",GUILayout.MinHeight(150f));
 		GUILayout.EndArea();
 	}
 	
@@ -88,13 +88,13 @@ public class GameGUI : MonoBehaviour {
 	private void countdown()
 	{
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box(Mathf.RoundToInt(gl.countDownTime-gl.countdownStart).ToString());
+		GUILayout.Box(Mathf.RoundToInt(gl.countDownTime-gl.countdownStart).ToString(),GUILayout.MinHeight(150f));
 		GUILayout.EndArea();
 	}
 	
 	private void playing(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		if(GUILayout.Button("I was caught!"))
+		if(GUILayout.Button("I was caught!",GUILayout.MinHeight(150f)))
 		{
 			gl.SendCaughtSignal();
 		}
@@ -103,14 +103,14 @@ public class GameGUI : MonoBehaviour {
 	
 	private void caught(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box("You're caught! And you're out!");
+		GUILayout.Box("You're caught! And you're out!",GUILayout.MinHeight(150f));
 		GUILayout.EndArea();
 	}
 	
 	private void status(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box("Team 1 score: " + gl.oneScore.ToString());
-		GUILayout.Box("Team 2 score: " + gl.twoScore.ToString());
+		GUILayout.Box("Team 1 score: " + gl.oneScore.ToString(),GUILayout.MinHeight(150f));
+		GUILayout.Box("Team 2 score: " + gl.twoScore.ToString(),GUILayout.MinHeight(150f));
 		GUILayout.EndArea();
 	}
 }

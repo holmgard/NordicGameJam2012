@@ -22,7 +22,7 @@ public class Tester : MonoBehaviour {
 		{
 			if(sm != null)
 			{
-				sm.PlaySound("sheep");
+				sm.PlaySound();
 			}
 		}
 		GUI.Box(new Rect(10,200,100,50), Input.acceleration.x.ToString());

@@ -29,14 +29,10 @@ public class GameGUI : MonoBehaviour {
 				joining();
 				break;
 				
-			case GameLogic.GameState.admin:
-				admin();
+			case GameLogic.GameState.countdown:
+				countdown();
 				break;
-						
-			case GameLogic.GameState.player:
-				player();
-				break;
-				
+							
 			case GameLogic.GameState.playing:
 				playing();
 				break;
@@ -73,7 +69,7 @@ public class GameGUI : MonoBehaviour {
 		GUILayout.EndArea();
 	}
 	
-	private void admin(){
+	/*private void admin(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
 		GUILayout.Box("You are the admin. Press the button, when every one is ready to start");
 		if(GUILayout.Button("Everyone's ready!"))
@@ -87,13 +83,20 @@ public class GameGUI : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
 		GUILayout.Box("Waiting for the admin to start the game\n.Now would be good time to put your phone in your pocket.");
 		GUILayout.EndArea();
+	}*/
+	
+	private void countdown()
+	{
+		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
+		GUILayout.Box(Mathf.RoundToInt(gl.countDownTime-gl.countdownStart).ToString());
+		GUILayout.EndArea();
 	}
 	
 	private void playing(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		if(GUILayout.Button("I was caught"))
+		if(GUILayout.Button("I was caught!"))
 		{
-			gl.State = GameLogic.GameState.caught;
+			gl.SendCaughtSignal();
 		}
 		GUILayout.EndArea();
 	}
@@ -106,7 +109,8 @@ public class GameGUI : MonoBehaviour {
 	
 	private void status(){
 		GUILayout.BeginArea(new Rect(0,0,Screen.width,Screen.height));
-		GUILayout.Box("Here will be the score board");
+		GUILayout.Box("Team 1 score: " + gl.oneScore.ToString());
+		GUILayout.Box("Team 2 score: " + gl.twoScore.ToString());
 		GUILayout.EndArea();
 	}
 }

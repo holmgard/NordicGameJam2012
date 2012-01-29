@@ -11,17 +11,22 @@ public class GameLogic : MonoBehaviour {
 	
 	public enum GameState
 	{
-		start,joining,admin,player,playing,caught,status
+		start,joining,countdown,playing,caught,status
 	}
 	
 	public SmartFoxListener smartFoxListener;
 	public SoundManager sm;
 	public GameState State;
 	
-	public string myTeam;
+	public int oneScore;
+	public int twoScore;
+	
+	public string myPlayerType;
 	
 	// Use this for initialization
 	void Start () {
+		Application.runInBackground = true;
+		
 		bool debug = true;
 		
 		smartFoxListener = FindObjectOfType(typeof(SmartFoxListener)) as SmartFoxListener;
@@ -29,10 +34,20 @@ public class GameLogic : MonoBehaviour {
 		State = GameState.start;
 	}
 	
+	public float countdownStart;
+	public float countDownTime = 10f;
+	
 	// Update is called once per frame
 	void Update ()
 	{
-		
+		if(State == GameLogic.GameState.countdown)
+		{
+			if(Time.time-countdownStart > countDownTime)
+			{
+				sm.PlaySound();
+				State = GameLogic.GameState.playing;
+			}
+		}
 	}
 	
 	public void OnReadyToJoin()
@@ -48,10 +63,13 @@ public class GameLogic : MonoBehaviour {
 		Debug.Log("Is SFS connected: " + smartFoxListener.smartFox.IsConnected.ToString());
 	}
 		
-	public void SetTeam(string team)
+	public void SetPlayerType(string playerType)
 	{
-		myTeam = team;
-		sm.PlaySound(team);
+		myPlayerType = playerType;
+		Debug.Log("Setting sound to: " + playerType);
+		sm.SetSound(myPlayerType);
+		Debug.Log("Got player type: " + myPlayerType);
+		SendReadySignal();
 	}
 	
 	public void SendReadySignal()
@@ -59,6 +77,12 @@ public class GameLogic : MonoBehaviour {
 		ISFSObject dataObject = new SFSObject();
 		dataObject.PutNull("");
 		smartFoxListener.smartFox.Send(new ExtensionRequest("readytoPlay",dataObject));
+	}
+	
+	public void OnStartPlayingGame()
+	{
+		countdownStart = Time.time;
+		State = GameLogic.GameState.countdown;
 	}
 	
 	public void RequestScore()
@@ -70,9 +94,11 @@ public class GameLogic : MonoBehaviour {
 	
 	public void SendCaughtSignal()
 	{
+		sm.StopSound();
 		ISFSObject dataObject = new SFSObject();
 		dataObject.PutNull("");
 		smartFoxListener.smartFox.Send(new ExtensionRequest("playerWasCaught",dataObject));
+		State = GameLogic.GameState.caught;
 	}
 	
 	void OnApplicationQuit()
@@ -82,34 +108,22 @@ public class GameLogic : MonoBehaviour {
 	
 	public void OnExtensionResponse(BaseEvent evt)
 	{
+		Debug.Log("In extension response");
 		string cmd = (string)evt.Params["cmd"];
 		SFSObject dataObject = (SFSObject)evt.Params["params"];
 		switch(cmd)
 		{
-		case "playerType":
-			string type = dataObject.GetUtfString("type");
-			if(type == "admin")
-			{
-				State = GameLogic.GameState.admin;
-			} else if (type == "player")
-			{
-				State = GameLogic.GameState.player;
-			}
+		case "playerTypeRequest":
+			SetPlayerType(dataObject.GetUtfString("playerTypeRequest"));
 			break;
-		case "gameState":
-			string gameState = dataObject.GetUtfString("gameState");
-			if(gameState == "startGame")
-			{
-				RequestTeam();
-			}
-			if(gameState == "gameOver")
-			{	
-				RequestScore();
-			}
+		case "gameStart":
+			Debug.Log("Got gameStart from server");
+			OnStartPlayingGame();
 			break;
-		case "teamInfo":
-			string playerTeam = dataObject.GetUtfString("playerTeam");
-			SetTeam(playerTeam);
+		case "gameEnd":
+			oneScore = dataObject.GetInt("oneScore");
+			twoScore = dataObject.GetInt("twoScore");
+			State = GameLogic.GameState.status;
 			break;
 		default:
 			break;

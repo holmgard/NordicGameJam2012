@@ -349,12 +349,16 @@
             The <see cref="P:Sfs2X.Core.BaseEvent.Params"/> object contains the following parameters.
             <list type="table">
               <listheader>
-                <term>errorMessage</term>
+                <term>parameter</term>
                 <description>description</description>
               </listheader>
               <item>
-                <term>buddy</term>
-                <description>(<b>String</b>) the error message</description>
+                <term>errorMessage</term>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -2076,7 +2080,7 @@
             <para/>
             <b>NOTE</b>: in the provided examples, <c>smartFox</c> always indicates a SmartFox instance.
             <para/>
-            Version 0.9.x
+            Version 0.9.14
             <para/>
             Author	The gotoAndPlay() Team and Thomas Hentschel Lund from Full Control<br/>
             http://www.smartfoxserver.com<br/>
@@ -2104,6 +2108,12 @@
         </member>
         <member name="M:Sfs2X.SmartFox.#ctor">
             
+        </member>
+        <member name="M:Sfs2X.SmartFox.enableLagMonitor(System.Boolean)">
+            Allows to monitor in real time the lag between client and server
+            When turned on you can listen for the SFSEvent.PING_PONG event which returns an average of the 10 lag values
+            
+            @see	com.smartfoxserver.v2.core.SFSEvent SFSEvent
         </member>
         <member name="M:Sfs2X.SmartFox.GetSocketEngine">
             Moved to kernel namespace - TODO
@@ -2437,6 +2447,9 @@
             Note: log delegates need to be removed separately
             </remarks>
         </member>
+        <member name="P:Sfs2X.SmartFox.LagMonitor">
+            <exclude/>
+        </member>
         <member name="P:Sfs2X.SmartFox.IsConnected">
             <summary>
             Returns true if the client connection is active
@@ -2454,12 +2467,41 @@
             
             <seealso cref="M:Sfs2X.SmartFox.LoadConfig(System.String,System.Boolean)"/>
         </member>
+        <member name="P:Sfs2X.SmartFox.UseBlueBox">
+            Gets or sets the current setting for the BlueBox connection. If active. the next connection attempt will try to use
+            HTTP tunnelling in case a socket connection is not available.
+            
+            <p><b>NOTE:</b> This property does not return the current state of the connection. In other words if the connection is already active
+            the property won't tell you if the connection to the server is done via socket or http. In order to get the current connection mode you should check the 
+            <b>connectionMode</b> value.</p>
+            
+            @see #connectionMode connectionMode
+        </member>
+        <member name="P:Sfs2X.SmartFox.ConnectionMode">
+            Return the current connection mode which can be <b>socket</b> or <b>http</b>.
+            
+            @example	The following example shows the connection mode:
+            <listing version="3.0">
+            
+            trace("Connection mode: ", sfs.connectionMode);
+            </listing>
+            
+            @see	com.smartfoxserver.v2.util.ConnectionMode ConnectionMode
+        </member>
         <member name="P:Sfs2X.SmartFox.CompressionThreshold">
             <summary>
             Return the current compression threshold: the value represent the maximum message size (in bytes) before the protocol compression is activated. 
             </summary>
             <remarks>
             The value is determined by the server configuration.
+            </remarks>
+        </member>
+        <member name="P:Sfs2X.SmartFox.MaxMessageSize">
+            <summary>
+            Returns the maximum size of messages allowed by the server. 
+            </summary>
+            <remarks>
+            Any request exceeding this size will not be sent. The value is determined by the server configuration.
             </remarks>
         </member>
         <member name="P:Sfs2X.SmartFox.Debug">
@@ -3444,6 +3486,9 @@
             </returns>
             <seealso cref="T:Sfs2X.Entities.Variables.RoomVariable"/>
         </member>
+        <member name="M:Sfs2X.Entities.Room.Merge(Sfs2X.Entities.Room)">
+            <exclude/>
+        </member>
         <member name="P:Sfs2X.Entities.Room.Id">
             <summary>
             The unique Id of the Room
@@ -4302,6 +4347,9 @@
             A <see cref="T:System.Collections.Generic.List`1"/>
             </returns>
         </member>
+        <member name="M:Sfs2X.Entities.Managers.IUserManager.ClearAll">
+            <exclude/>
+        </member>
         <member name="P:Sfs2X.Entities.Managers.IUserManager.UserCount">
             <summary>
             Get the total number of Users 
@@ -4616,6 +4664,9 @@
             <returns>
             true if the User exists in the Room
             </returns>
+        </member>
+        <member name="M:Sfs2X.Entities.SFSRoom.Merge(Sfs2X.Entities.Room)">
+            <exclude/>
         </member>
         <member name="P:Sfs2X.Entities.SFSRoom.Id">
             <summary>
@@ -4959,12 +5010,6 @@
         <member name="F:Sfs2X.Entities.Managers.SFSBuddyManager.myOnlineState">
             <exclude/>
         </member>
-        <member name="F:Sfs2X.Entities.Managers.SFSBuddyManager.myNickName">
-            <exclude/>
-        </member>
-        <member name="F:Sfs2X.Entities.Managers.SFSBuddyManager.myState">
-            <exclude/>
-        </member>
         <member name="F:Sfs2X.Entities.Managers.SFSBuddyManager.inited">
             <exclude/>
         </member>
@@ -5104,10 +5149,10 @@
             <b>Example #1</b> Shows how set a number of User variables
             		<code>
             		List&lt;UserVariable&gt; userVars = new List&lt;UserVariable&gt;();
-            		roomVars.Add( new SFSUserVariable("avatarType", "SwedishCook") );
-            		roomVars.Add( new SFSUserVariable("country", "Sweden") );
-            		roomVars.Add( new SFSUserVariable("x", 10) );
-            		roomVars.Add( new SFSUserVariable("y", 5) );
+            		userVars.Add( new SFSUserVariable("avatarType", "SwedishCook") );
+            		userVars.Add( new SFSUserVariable("country", "Sweden") );
+            		userVars.Add( new SFSUserVariable("x", 10) );
+            		userVars.Add( new SFSUserVariable("y", 5) );
             
             		smartFox.Send ( new SetUserVariablesRequest(userVars) );
             		</code>
@@ -5117,13 +5162,11 @@
             		smartFox.AddEventListener(SFSEvent.USER_VARIABLES_UPDATE, OnUserVarsUpdate);
             		
             		void OnUserVarsUpdate(BaseEvent evt) {
-            			List&lt;UserVariable&gt; changedVars = (List&lt;UserVariable&gt;)evt.Params["changedVars"];
+            			List&lt;String&gt; changedVars = (List&lt;String&gt;)evt.Params["changedVars"];
             			User user = (User)evt.Params["user"];
             
-            	**TODO - code in AS3 - need to port to C#**
-            
             			// Check if the user changed his x &amp; y user variables
-            			if (changedVars.indexOf("x") != -1 || changedVars.indexOf("y") != -1)
+            			if (changedVars.Contains("x") || changedVars.Contains("y") != -1)
             			{
             				// Move the character to a new position...
             				UpdateClientPosition(user);
@@ -5461,6 +5504,9 @@
         <member name="M:Sfs2X.Entities.Managers.SFSUserManager.GetUserList">
             <inheritdoc />
         </member>
+        <member name="M:Sfs2X.Entities.Managers.SFSUserManager.ClearAll">
+            <exclude/>
+        </member>
         <member name="P:Sfs2X.Entities.Managers.SFSUserManager.UserCount">
             <inheritdoc />
         </member>
@@ -5536,7 +5582,7 @@
               </listheader>
               <item>
                 <term>success</term>
-                <description>(<b>bool</b>) true if a connection was established, false otherwise.</description>
+                <description>(<b>bool</b>) true if a connection was established, false otherwise</description>
               </item>
             </list>
             </remarks>
@@ -5559,6 +5605,26 @@
             <seealso cref="F:Sfs2X.Core.SFSEvent.CONNECTION_RETRY"/>
             <seealso cref="F:Sfs2X.Core.SFSEvent.CONNECTION_RESUME"/>
             <seealso cref="F:Sfs2X.Core.SFSEvent.CONNECTION_LOST"/>
+        </member>
+        <member name="F:Sfs2X.Core.SFSEvent.PING_PONG">
+            The <em>SFSEvent.PING_PONG</em> constant defines the value of the <em>type</em> property of the event object for a <em>pingPong</em> event.
+            <p>The event is fired when measuring the lag between client and server</p>
+            
+            <p>The properties of the <em>params</em> object contained in the event object have the following values:</p>
+            <table class="innertable">
+            <tr><th>Property</th><th>Type</th><th>Description</th></tr>
+            <tr><td>lagValue</td><td><em>int</em></td><td>an average of the last 10 lag values, expressed in milliseconds</td></tr>
+            </table>
+        </member>
+        <member name="F:Sfs2X.Core.SFSEvent.SOCKET_ERROR">
+            The <em>SFSEvent.SOCKET_ERROR</em> constant defines the value of the <em>type</em> property of the event object for a <em>socketError</em> event.
+            <p>The event is fired when an unexpected socket error occurs, typically a data error.</p>
+            
+            <p>The properties of the <em>params</em> object contained in the event object have the following values:</p>
+            <table class="innertable">
+            <tr><th>Property</th><th>Type</th><th>Description</th></tr>
+            <tr><td>errorMessage</td><td><em>int</em></td><td>the description of the problem</td></tr>
+            </table>
         </member>
         <member name="F:Sfs2X.Core.SFSEvent.CONNECTION_LOST">
             <summary>
@@ -5679,6 +5745,18 @@
             <seealso cref="F:Sfs2X.Core.SFSEvent.CONNECTION_RESUME"/>
             <seealso cref="F:Sfs2X.Core.SFSEvent.CONNECTION"/>
         </member>
+        <member name="F:Sfs2X.Core.SFSEvent.CONNECTION_ATTEMPT_HTTP">
+            The <em>SFSEvent.CONNECTION_ATTEMPT_HTTP</em> constant defines the value of the <em>type</em> property of the event object for a <em>connectionAttemptHttp</em> event.
+            
+            <p>No parameters are available for this event object.</p>
+            
+            @example	See the example provided in the <em>CONNECTION_ATTEMPT_HTTP</em> constant description.
+            
+            @eventType	connectionAttemptHttp
+            
+            @see		#CONNECTION
+            @see		#CONNECTION_LOST
+        </member>
         <member name="F:Sfs2X.Core.SFSEvent.CONFIG_LOAD_SUCCESS">
             <summary>
             Dispatched when the external SmartFox configuration file has been loaded successfully.
@@ -5777,7 +5855,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -5896,7 +5978,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -5957,7 +6043,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6419,7 +6509,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6438,7 +6532,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6507,7 +6605,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6526,7 +6628,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6568,7 +6674,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6608,7 +6718,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6646,7 +6760,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6753,7 +6871,11 @@
               </listheader>
               <item>
                 <term>errorMessage</term>
-                <description>(<b>String</b>) the error message</description>
+                <description>(<b>string</b>) the error message</description>
+              </item>
+              <item>
+                <term>errorCode</term>
+                <description>(<b>short</b>) the error code</description>
               </item>
             </list>
             </remarks>
@@ -6943,6 +7065,17 @@
             <exclude/>
         </member>
         <member name="M:Sfs2X.Logging.LoggerEvent.ToString">
+            <exclude/>
+        </member>
+        <member name="T:Sfs2X.Requests.PingPongRequest">
+            <summary>
+            Sends a ping-pong request in order to measure the current lag
+            </summary>
+        </member>
+        <member name="M:Sfs2X.Requests.PingPongRequest.Validate(Sfs2X.SmartFox)">
+            <exclude/>
+        </member>
+        <member name="M:Sfs2X.Requests.PingPongRequest.Execute(Sfs2X.SmartFox)">
             <exclude/>
         </member>
         <member name="T:Sfs2X.Entities.Variables.SFSBuddyVariable">
@@ -7393,16 +7526,17 @@
             		smartFox.AddEventListener(SFSEvent.ROOM_VARIABLES_UPDATE, OnRoomVarsUpdate);
             		
             		void OnRoomVarsUpdate(BaseEvent evt) {
-            			List&lt;RoomVariable&gt; changedVars = (List&lt;RoomVariable&gt;)evt.Params["changedVars"];
+            			List&lt;String&gt; changedVars = (List&lt;String&gt;)evt.Params["changedVars"];
             			Room room = (Room)evt.Params["room"];
             
             			// Check if the gameStarted variable was changed
-            			SFSRoomVariable startVar = changedVars[0];
-            			if (startVar != null &amp;&amp; startVar.Name == "gameStarted" &amp;&amp; startVar.GetBoolValue() == true) {
-            				Console.WriteLine("Game Starts!");
-            			} else {
-            				Console.WriteLine("Game was Stopped!");
-            			}		
+            			if (changedVars.Contains ("gameStarted")) {
+            				if (room.GetVariable ("gameStarted").GetBoolValue () == true) {
+            					Console.WriteLine("Game Starts!");
+            				} else {
+            					Console.WriteLine("Game was Stopped!");
+            				}
+            			} 
             		}
             		</code>
             </example>
@@ -7543,6 +7677,9 @@
             <exclude/>
         </member>
         <member name="F:Sfs2X.Requests.HandshakeRequest.KEY_CLIENT_TYPE">
+            <exclude/>
+        </member>
+        <member name="F:Sfs2X.Requests.HandshakeRequest.KEY_MAX_MESSAGE_SIZE">
             <exclude/>
         </member>
         <member name="T:Sfs2X.Entities.Match.MatchExpression">
@@ -8080,22 +8217,30 @@
         <member name="F:Sfs2X.Requests.BanUserRequest.KEY_BAN_MODE">
             <exclude/>
         </member>
+        <member name="F:Sfs2X.Requests.BanUserRequest.KEY_BAN_DURATION_HOURS">
+            <exclude/>
+        </member>
         <member name="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32)">
             <summary>
-            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32)"/>
+            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32,System.Int32)"/>
             </summary>
         </member>
         <member name="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String)">
             <summary>
-            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32)"/>
+            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32,System.Int32)"/>
             </summary>
         </member>
         <member name="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode)">
             <summary>
-            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32)"/>
+            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32,System.Int32)"/>
             </summary>
         </member>
         <member name="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32)">
+            <summary>
+            <see cref="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:Sfs2X.Requests.BanUserRequest.#ctor(System.Int32,System.String,Sfs2X.Requests.BanMode,System.Int32,System.Int32)">
             <summary>
             Constructor
             </summary>
@@ -8110,6 +8255,9 @@
             </param>
             <param name="delaySeconds">
             a delay in seconds between the message (immediate) and the kick (delayed). Default is 5 seconds
+            </param>
+            <param name="durationHours">
+            The duration of the banishment, expressed in hours.
             </param>
             <example>
             <code>

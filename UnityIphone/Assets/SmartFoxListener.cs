@@ -61,9 +61,9 @@ public class SmartFoxListener : MonoBehaviour {
 		smartFox.AddEventListener(SFSEvent.LOGIN_ERROR, OnLoginError);
 		smartFox.AddEventListener(SFSEvent.LOGOUT, OnLogout);
 		smartFox.AddEventListener(SFSEvent.ROOM_JOIN, OnJoinRoom);
-		smartFox.AddEventListener(SFSEvent.PUBLIC_MESSAGE, OnPublicMessage);
+		//smartFox.AddEventListener(SFSEvent.PUBLIC_MESSAGE, OnPublicMessage);
 		smartFox.AddEventListener(SFSEvent.EXTENSION_RESPONSE, OnExtensionResponse);
-
+		
 		smartFox.AddLogListener(LogLevel.DEBUG, OnDebugMessage);
 		
 		//smartFox.Connect(serverName, serverPort);
@@ -208,7 +208,7 @@ public class SmartFoxListener : MonoBehaviour {
 		gl.OnJoinedRoom();
 	}
 
-	void OnPublicMessage(BaseEvent evt) {
+	/*void OnPublicMessage(BaseEvent evt) {
 		try {
 			string message = (string)evt.Params["message"];
 			User sender = (User)evt.Params["sender"];
@@ -224,10 +224,11 @@ public class SmartFoxListener : MonoBehaviour {
 		catch (Exception ex) {
 			Debug.Log("Exception handling public message: "+ex.Message+ex.StackTrace);
 		}
-	}
+	}*/
 	
 	public void OnExtensionResponse(BaseEvent evt)
 	{
+		Debug.Log("Extension response in SmartFoxListener");
 		gl.OnExtensionResponse(evt);
 	}
 	

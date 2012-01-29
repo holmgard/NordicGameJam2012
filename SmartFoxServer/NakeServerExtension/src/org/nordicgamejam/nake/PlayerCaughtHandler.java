@@ -2,13 +2,13 @@ package org.nordicgamejam.nake;
 
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
-import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 
-public class PlayerCaughtHandler extends BaseClientRequestHandler {
+public class PlayerCaughtHandler extends SnakeHandler {
 
 	@Override
 	public void handleClientRequest(User arg0, ISFSObject arg1) {
-		// TODO Auto-generated method stub
+		trace("In player caught handler");
+		getGameForPlayer(arg0).catchPlayer(arg0);
 
 	}
 

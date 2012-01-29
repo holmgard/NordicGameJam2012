@@ -1,0 +1,19 @@
+body
+{
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: center;
+}
+
+img
+{
+	width: 100%;
+	border: none;
+}
+
+input {
+}

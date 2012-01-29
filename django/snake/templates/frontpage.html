@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<img src="/media/images/logo.png" />
+<div style="color:red;">{{ message }}</div>
+<form action ="." method="POST">Enter your name:<br/><input type="text" name="name"/><br/><input type="submit" value="Enter Snake Club"/></form>
+{% endblock %}

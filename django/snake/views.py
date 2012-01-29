@@ -3,6 +3,7 @@ from django.contrib.sessions.models import Session
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.core.urlresolvers import reverse
 from django.views.decorators.cache import never_cache
+from django.template.context import RequestContext
 import random
 import uuid
 
@@ -37,21 +38,28 @@ Session.objects.all().delete()
 def frontpage(request):
     global game
 
-    if request.method == 'POST':
-        name = request.POST['name']
-        if name:
-            player = Player(request.POST['name'])
-        
-            game.players.append(player)
-            request.session['player_index'] = len(game.players) - 1
-        
-            return HttpResponseRedirect(reverse('lobby'))
+    context = {}
 
+    if len(game.players) >= game.number_of_players:
+        context = { 'message': 'Snake Club is full. Sorry.'}
+
+    if request.method == 'POST':
+        if len(game.players) < game.number_of_players:
+            name = request.POST['name']
+            if name:
+                name = name.strip()
+                player = Player(name)
+        
+                game.players.append(player)
+                request.session['player_index'] = len(game.players) - 1
+        
+                return HttpResponseRedirect(reverse('lobby'))
+        
     if request.session.get('player_index', None):
         return HttpResponseRedirect(reverse('lobby'))
     else:
-        return HttpResponse('<h1>Welcome to Snake Club ('+ str(game.number_of_players) + ')</h1><form action ="." method="POST">Name:<input type="text" name="name"/><input type="submit"/></form>')
-
+        return render_to_response('frontpage.html', context, RequestContext(request))
+        
 @never_cache
 def lobby(request):
     global game
@@ -63,11 +71,16 @@ def lobby(request):
         if not game.snakes_created:
             make_snakes()
             
-        return HttpResponseRedirect(reverse('target', args=[str(uuid.uuid1())]))
+        return HttpResponseRedirect(reverse('target'))
     
-    s = '<html><head><meta http-equiv="refresh" content="1"></head><body>' + str(len(game.players)) + '/' + str(game.number_of_players) + '</body></html>'
+    list_of_player_names = list(player.name for player in game.players)
+    list_of_player_names.reverse()
+    player_names = ', '.join(list_of_player_names)
     
-    return HttpResponse(s)
+    return render_to_response('lobby.html', { 
+        'player_names': player_names, 
+        'waiting_for': (game.number_of_players - len(game.players)) 
+    }, RequestContext(request))
     
 def make_snakes():
     global game
@@ -108,7 +121,7 @@ def make_snakes():
     game.snakes_created = True
   
 @never_cache 
-def target(request, dummy):
+def target(request):
     global game
     
     player_index = request.session.get('player_index', None)
@@ -118,10 +131,13 @@ def target(request, dummy):
 
     player = game.players[player_index]
 
-    return HttpResponse('<div style="width: 100%; text-align:center">Find this animal<br/><div style="font-size: 800%;"><a style="text-decoration: none;" href="' + reverse('you', args=[str(uuid.uuid1())]) + '">' + str(player.target) + '</a></div><br/>Tap to continue...<div>')    
+    return render_to_response('target.html', { 
+        'animal_number': str(player.target)
+    }, RequestContext(request))
+
 
 @never_cache
-def you(request, dummy):
+def you(request):
     global game
     player_index = request.session.get('player_index', None)
     
@@ -130,8 +146,10 @@ def you(request, dummy):
     
     player = game.players[player_index]
     
-    return HttpResponse('<div style="width: 100%; text-align:center;">Put this behind your back<br/><div style="font-size: 800%; text-decoration: none;"><a style="text-decoration: none;" href="' + reverse('you_touch') + '">' + str(player.me) + '</a></div><div>')
-
+    return render_to_response('you.html', { 
+        'animal_number': str(player.me)
+    }, RequestContext(request))
+    
 @never_cache
 def you_touch(request):
     player_index = request.session.get('player_index', None)
@@ -166,18 +184,20 @@ def wait_result(request):
     if game.has_result:
         return HttpResponseRedirect(reverse('result'))
     
-    s = '<html><head><meta http-equiv="refresh" content="1"></head><body>Waiting for result... ' + str(len(list(player for player in game.players if player.touched)))+ '/' + str(game.number_of_players)+'</body></html>'
-    return HttpResponse(s)
+    return render_to_response('wait_result.html', {}, RequestContext(request))
 
 @never_cache    
 def result(request):
+    if request.session.get('player_index', None) == None:
+        return HttpResponseRedirect(reverse('frontpage'))
+    
     global game
     
     sorted_snakes = sorted(game.snakes, key=lambda snake: snake.position)
-    s = '<br/>'.join((str(snake.position) + '. ' + (', '.join(game.players[idx].name for idx in snake.player_indices))) for snake in sorted_snakes)
+    result = '<br/>'.join(('<h1>' + str(snake.position) + '. place:</h1>' + (', '.join(game.players[idx].name for idx in snake.player_indices))) for snake in sorted_snakes)
     
-    return HttpResponse('<h1>Winners of Snake Club</h1>' + s)
-
+    return render_to_response('result.html', { 'result': result }, RequestContext(request))
+    
 def reset(request, number_of_players):
     global game
     

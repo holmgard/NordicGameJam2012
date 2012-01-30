@@ -26,6 +26,8 @@ public class GameLogic : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Application.runInBackground = true;
+		iPhoneSettings.screenCanDarken = false;
+		Screen.sleepTimeout = 0.0f;
 		
 		bool debug = true;
 		
@@ -45,6 +47,7 @@ public class GameLogic : MonoBehaviour {
 			if(Time.time-countdownStart > countDownTime)
 			{
 				sm.PlaySound();
+				iPhoneUtils.Vibrate();
 				State = GameLogic.GameState.playing;
 			}
 		}

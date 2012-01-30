@@ -18,12 +18,11 @@ public class NakeGame extends Object {
 			putInt("oneScore", 0);
 			putInt("twoScore", 0);
 		}
-
 	}
 
 	// public int currentPlayers = 0;
 	private static final int maxPlayers = 10;
-	private static final int minPlayers = 2;
+	private static final int minPlayers = 1;
 	// private final int readyPlayers = 0;
 
 	// public ArrayList<User> playersInGame;

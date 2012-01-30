@@ -26,6 +26,6 @@ public class Tester : MonoBehaviour {
 			}
 		}
 		GUI.Box(new Rect(10,200,100,50), Input.acceleration.x.ToString());
-		GUI.Box(new Rect(10,250,100,50), Input.acceleration.x.ToString());
+		GUI.Box(new Rect(10,250,100,50), Input.acceleration.y.ToString());
 	}
 }
